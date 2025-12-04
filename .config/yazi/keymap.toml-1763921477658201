@@ -1,0 +1,7 @@
+[manager]
+# The 'e' key is the standard choice for 'edit'
+# This command will close yazi and launch nvim on the currently selected file(s).
+e = [
+    # The 'open' command executes the program
+    { run = "nvim $file", block = true, orphan=true }
+]
