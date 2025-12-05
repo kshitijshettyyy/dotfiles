@@ -8,3 +8,15 @@ This repository contains my dotfiles, which are the config files and scripts I u
 - Shell: [Fish](https://fishshell.com/)
 - File Manager: [Yazi](https://github.com/YaziFM/Yazi)
 - Window Management: [Rectangle](https://rectangleapp.com/)
+
+## Machines I Use
+
+### Work
+- **MacBook Pro (M3 Pro)**
+  - macOS  
+  - ARM64 arch
+
+### Personal
+- **Lenovo ThinkBook**
+  - Arch Linux
+  - AMD64 arch
