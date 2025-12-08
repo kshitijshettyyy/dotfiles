@@ -1,0 +1,9 @@
+[manager]
+# default edit key
+e = [
+    { run = "nvim $files", block = true, orphan=true }
+]
+
+[[manager.bindings]]
+key = "R"
+command = "shell --interactive /usr/bin/env bash /Users/kshetty/.config/yazi/scripts/rg_search.sh"
