@@ -10,7 +10,7 @@ font-size = 17
 #theme = Gruvbox Dark Hard
 theme = Atom
 font-feature = -liga
-background-opacity = 0.75 
+#background-opacity = 0.75 
 background-blur-radius = 40 
 macos-titlebar-style = transparent
 
