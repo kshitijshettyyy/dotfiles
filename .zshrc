@@ -41,4 +41,3 @@ export GIT_SSH_COMMAND="ssh -F ~/.ssh/config"
 
 # alias login='eval $(~/.doormat-auth.sh)'
 alias login='doormat login && eval $(doormat aws -a aws_kshitij.shetty_test export)'
-

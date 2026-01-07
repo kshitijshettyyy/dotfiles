@@ -1,4 +1,3 @@
-
 set -e MAIL
 set fish_greeting
 
@@ -23,7 +22,7 @@ alias login='doormat login && eval $(doormat aws -a aws_kshitij.shetty_test expo
 alias v="nvim"
 alias config="cd ~/.config"
 #-------------------------------------------------------------------------------------------------
-#functions
+# my custom functions
 #-------------------------------------------------------------------------------------------------
 
 function nf
@@ -38,9 +37,34 @@ function y
 	end
 	rm -f -- "$tmp"
 end
-#starship init fish | source
+
+function cf
+	if test (count $argv) -eq 0
+		echo "Usage: cf <file>"
+		return 1
+	end
+
+	set file $argv[1]
+	if not test -e $file
+		echo "cf: file not found: $file"
+		return 1
+	end
+
+	realpath $file | pbcopy
+	echo "Copied :"(realpath $file)
+end
 #
 # Set to 0 to show the full path
 set -U fish_prompt_pwd_dir_length 0
 
 export EDITOR=nvim
+
+### MANAGED BY RANCHER DESKTOP START (DO NOT EDIT)
+set --export --prepend PATH "/Users/kshetty/.rd/bin"
+### MANAGED BY RANCHER DESKTOP END (DO NOT EDIT)
+#
+#
+#VCM based configs
+set -gx VAULT_LICENSE_PATH /Users/kshetty/workspace/work/license/vault.hclic
+set -gx GOPATH /Users/kshetty/go
+set -gx PATH $GOPATH/bin $PATH
