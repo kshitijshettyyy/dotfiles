@@ -18,5 +18,5 @@ This repository contains my dotfiles, which are the config files and scripts I u
 
 ### Personal
 - **Lenovo ThinkBook**
-  - Arch Linux
+  - Nobara Linux
   - AMD64 arch
