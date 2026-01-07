@@ -4,7 +4,7 @@ This repository contains my dotfiles, which are the config files and scripts I u
 ## Tools that I use
 - Editor: [NeoVim](https://neovim.io/)
 - Multiplexer: [Tmux](https://github.com/tmux/tmux)
-- Terminal: [Ghostty](https://github.com/christophediericx/ghostty)
+- Terminal: [Ghostty](https://github.com/ghostty-org/ghostty)
 - Shell: [Fish](https://fishshell.com/)
 - File Manager: [Yazi](https://github.com/YaziFM/Yazi)
 
