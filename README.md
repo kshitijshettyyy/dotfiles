@@ -7,7 +7,6 @@ This repository contains my dotfiles, which are the config files and scripts I u
 - Terminal: [Ghostty](https://github.com/christophediericx/ghostty)
 - Shell: [Fish](https://fishshell.com/)
 - File Manager: [Yazi](https://github.com/YaziFM/Yazi)
-- Window Management: [Rectangle](https://rectangleapp.com/)
 
 ## Machines I Use
 
