@@ -1,2 +1,3 @@
 # Ignore all tmux TPM plugins
 .config/tmux/plugins/
+.config/fish/secrets.fish

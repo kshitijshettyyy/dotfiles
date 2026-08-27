@@ -10,6 +10,7 @@ fish_add_path ~/go/bin
 #-------------------------------------------------------------------------------------------------
 
 #alias nf="nvim ~/.config/fish/config.fish"
+alias c="cd ~/workspace/work/consumption/"
 alias w="cd ~/workspace/work/"
 alias l="cd ~/workspace/learning/"
 alias p="cd ~/workspace/projects/"
@@ -19,8 +20,11 @@ alias ll="lsd -l --group-dirs=first --git"
 alias ls="lsd --group-dirs=first --git"
 alias la="lsd -la --group-dirs=first --git"
 alias login='doormat login && eval $(doormat aws -a aws_kshitij.shetty_test export)'
+alias slogin='doormat login && eval $(doormat aws -a vault_automation_dev export)'
 alias v="nvim"
 alias config="cd ~/.config"
+alias tf="terraform"
+source (brew --prefix asdf)/libexec/asdf.fish
 #-------------------------------------------------------------------------------------------------
 # my custom functions
 #-------------------------------------------------------------------------------------------------
@@ -38,7 +42,23 @@ function y
 	rm -f -- "$tmp"
 end
 
-function cf
+function cfc
+	if test (count $argv) -eq 0
+		echo "Usage: cfc <file>"
+		return 1
+	end
+
+	set file $argv[1]
+	if not test -e $file
+		echo "cfc: file not found: $file"
+		return 1
+	end
+
+	cat $file | pbcopy
+	echo "Copied contents of: "(realpath $file)
+end
+
+function cfp
 	if test (count $argv) -eq 0
 		echo "Usage: cf <file>"
 		return 1
@@ -68,3 +88,8 @@ set --export --prepend PATH "/Users/kshetty/.rd/bin"
 set -gx VAULT_LICENSE_PATH /Users/kshetty/workspace/work/license/vault.hclic
 set -gx GOPATH /Users/kshetty/go
 set -gx PATH $GOPATH/bin $PATH
+
+if test -f ~/.config/fish/secrets.fish
+    source ~/.config/fish/secrets.fish
+end
+

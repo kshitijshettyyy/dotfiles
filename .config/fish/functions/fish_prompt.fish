@@ -55,6 +55,19 @@ function fish_prompt --description 'Write out the prompt'
     set -l statusb_color (set_color --bold $fish_color_status)
     set -l prompt_status (__fish_print_pipestatus "[" "]" "|" "$status_color" "$statusb_color" $last_pipestatus)
     echo -n $prompt_status
+    set_color $color_cwd
+
+    # Always show command duration
+    set total (math -s0 "$CMD_DURATION / 1000")
+    set mins (math -s0 "$total / 60")
+    set secs (math -s0 "$total % 60")
+
+    set_color $color_cwd
+    if test $mins -gt 0
+        printf "[%sm%ss] " $mins $secs
+    else
+        printf "[%ss] " $secs
+    end
     set_color normal
 
     echo -n "$suffix "
